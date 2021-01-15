@@ -2,7 +2,7 @@ Reference: [简书](https://www.jianshu.com/p/f2d4dd4d1fb1)
 
 # ALL
 
-## // Set up Swap, Hostname, Docker, K8s
+## Set up Swap, Hostname, Docker, K8s
 
 ```bash
 chmod u+x kubeadm.sh
@@ -13,7 +13,7 @@ chmod u+x kubeadm.sh
 
 # MASTER
 
-## // Set up flannel
+## Set up flannel
 
 
 
