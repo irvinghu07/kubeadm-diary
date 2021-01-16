@@ -24,7 +24,7 @@ chmod u+x master.sh
 
 
 
-# SLAVE
+# WORKER
 
 ## Join Master
 
@@ -33,6 +33,29 @@ chmod u+x master.sh
 ```bash
 kubeadm token create --print-join-command
 ```
+
+## Configure worker, in order to fetch cluster information from worker
+
+```bash
+kubectl get nodes
+ --> The connection to the server localhost:8080 was refused - did you specify the right host or port?
+```
+
+
+
+```bash
+# Check with Cmd
+kubectl get nodes
+
+sudo cp /etc/kubernetes/kubelet.conf $HOME/
+sudo chown $(id -u):$(id -g) $HOME/kubelet.conf
+export KUBECONFIG=$HOME/kubelet.conf
+
+# Check Again
+kubectl get nodes
+```
+
+
 
 ---
 
@@ -62,3 +85,13 @@ vim /etc/hostname
 vim /etc/hosts
 ```
 
+---
+
+# Temporary Disable SWAP
+
+```bash
+# Taking effect after reboot
+swapoff -a
+```
+
+ 

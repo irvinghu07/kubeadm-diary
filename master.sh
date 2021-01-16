@@ -1,3 +1,9 @@
+kubeadm init \
+--apiserver-advertise-address=$NODE_IP_I \
+--image-repository registry.aliyuncs.com/google_containers \
+--pod-network-cidr=10.244.0.0/16
+
+
 mkdir -p /root/.kube && \
 cp /etc/kubernetes/admin.conf /root/.kube/config
 
@@ -238,3 +244,5 @@ kubectl get nodes
 kubectl get cs
 
 kubectl get all --all-namespaces
+
+kubeadm token create --print-join-command
