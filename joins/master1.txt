@@ -1,0 +1,1 @@
+kubeadm join 39.108.72.65:6443 --token 4k17j4.yoedhm4yl8dlcexi     --discovery-token-ca-cert-hash sha256:51c8dfbb133ceea387723c02fe1f0b9f0a61858ce96bafe0904405db19c8473b 

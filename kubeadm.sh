@@ -27,6 +27,6 @@ cat <<EOF >/etc/apt/sources.list.d/kubernetes.list
 deb https://mirrors.aliyun.com/kubernetes/apt/ kubernetes-xenial main
 EOF
 # 更新源列表
-apt-get update
+apt-get update && 
 # 下载 kubectl，kubeadm以及 kubelet
 apt-get install -y kubelet kubeadm kubectl
